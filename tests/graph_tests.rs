@@ -1,5 +1,5 @@
 use ac_lib::graph::{
-    Edge, UnionFind, bfs, bfs_with_callback, dfs, dfs_with_callback, dijkstra, dijkstra_with_path,
+    bfs, bfs_with_callback, dfs, dfs_with_callback, dijkstra, dijkstra_with_path, Edge, UnionFind,
 };
 
 #[test]
