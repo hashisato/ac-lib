@@ -1,4 +1,4 @@
-use ac_lib::math::{gcd, lcm, is_prime, generate_primes, nth_prime, ModInt};
+use ac_lib::math::{ModInt, gcd, generate_primes, is_prime, lcm, nth_prime};
 
 #[test]
 fn test_gcd() {
@@ -33,7 +33,7 @@ fn test_is_prime() {
 fn test_generate_primes() {
     let primes = generate_primes(20);
     assert_eq!(primes, vec![2, 3, 5, 7, 11, 13, 17, 19]);
-    
+
     let primes_10 = generate_primes(10);
     assert_eq!(primes_10, vec![2, 3, 5, 7]);
 }
@@ -50,10 +50,10 @@ fn test_nth_prime() {
 fn test_modint_new() {
     let m = ModInt::new(5, 7);
     assert_eq!(m.value(), 5);
-    
+
     let m2 = ModInt::new(-3, 7);
     assert_eq!(m2.value(), 4);
-    
+
     let m3 = ModInt::new(10, 7);
     assert_eq!(m3.value(), 3);
 }
@@ -72,7 +72,7 @@ fn test_modint_sub() {
     let b = ModInt::new(3, 7);
     let c = a.sub(&b);
     assert_eq!(c.value(), 2);
-    
+
     let d = ModInt::new(2, 7);
     let e = ModInt::new(5, 7);
     let f = d.sub(&e);
@@ -92,7 +92,7 @@ fn test_modint_pow() {
     let a = ModInt::new(2, 1000000007);
     let b = a.pow(10);
     assert_eq!(b.value(), 1024);
-    
+
     let c = ModInt::new(3, 7);
     let d = c.pow(3);
     assert_eq!(d.value(), 6);
@@ -139,7 +139,7 @@ fn test_is_prime_large() {
 fn test_generate_primes_edge_cases() {
     let primes = generate_primes(2);
     assert_eq!(primes, vec![2]);
-    
+
     let primes_1 = generate_primes(1);
     assert_eq!(primes_1, Vec::<u64>::new());
 }
@@ -178,7 +178,7 @@ fn test_modint_chain_operations() {
     let a = ModInt::new(2, 7);
     let b = ModInt::new(3, 7);
     let c = ModInt::new(4, 7);
-    
+
     let result = a.add(&b).mul(&c);
     assert_eq!(result.value(), 6);
 }
