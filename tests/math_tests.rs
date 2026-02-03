@@ -1,4 +1,4 @@
-use ac_lib::math::{ModInt, gcd, generate_primes, is_prime, lcm, nth_prime};
+use ac_lib::math::{gcd, generate_primes, is_prime, lcm, nth_prime, ModInt};
 
 #[test]
 fn test_gcd() {
