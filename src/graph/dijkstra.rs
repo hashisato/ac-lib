@@ -33,7 +33,7 @@ impl PartialEq for State {
 
 impl Eq for State {}
 
-pub fn dijkstra(graph: &Vec<Vec<Edge>>, start: usize) -> Vec<usize> {
+pub fn dijkstra(graph: &[Vec<Edge>], start: usize) -> Vec<usize> {
     let n = graph.len();
     let mut dist = vec![usize::MAX; n];
     let mut heap = BinaryHeap::new();
@@ -65,10 +65,7 @@ pub fn dijkstra(graph: &Vec<Vec<Edge>>, start: usize) -> Vec<usize> {
     dist
 }
 
-pub fn dijkstra_with_path(
-    graph: &Vec<Vec<Edge>>,
-    start: usize,
-) -> (Vec<usize>, Vec<Option<usize>>) {
+pub fn dijkstra_with_path(graph: &[Vec<Edge>], start: usize) -> (Vec<usize>, Vec<Option<usize>>) {
     let n = graph.len();
     let mut dist = vec![usize::MAX; n];
     let mut parent = vec![None; n];
