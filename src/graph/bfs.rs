@@ -1,6 +1,6 @@
 use std::collections::VecDeque;
 
-pub fn bfs(graph: &Vec<Vec<usize>>, start: usize, visited: &mut Vec<bool>) -> Vec<usize> {
+pub fn bfs(graph: &[Vec<usize>], start: usize, visited: &mut [bool]) -> Vec<usize> {
     let mut queue = VecDeque::new();
     let mut order = Vec::new();
 
@@ -22,9 +22,9 @@ pub fn bfs(graph: &Vec<Vec<usize>>, start: usize, visited: &mut Vec<bool>) -> Ve
 }
 
 pub fn bfs_with_callback<F>(
-    graph: &Vec<Vec<usize>>,
+    graph: &[Vec<usize>],
     start: usize,
-    visited: &mut Vec<bool>,
+    visited: &mut [bool],
     callback: &mut F,
 ) where
     F: FnMut(usize),
