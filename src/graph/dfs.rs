@@ -1,15 +1,10 @@
-pub fn dfs(graph: &Vec<Vec<usize>>, start: usize, visited: &mut Vec<bool>) -> Vec<usize> {
+pub fn dfs(graph: &[Vec<usize>], start: usize, visited: &mut [bool]) -> Vec<usize> {
     let mut order = Vec::new();
     dfs_helper(graph, start, visited, &mut order);
     order
 }
 
-fn dfs_helper(
-    graph: &Vec<Vec<usize>>,
-    node: usize,
-    visited: &mut Vec<bool>,
-    order: &mut Vec<usize>,
-) {
+fn dfs_helper(graph: &[Vec<usize>], node: usize, visited: &mut [bool], order: &mut Vec<usize>) {
     visited[node] = true;
     order.push(node);
 
@@ -21,9 +16,9 @@ fn dfs_helper(
 }
 
 pub fn dfs_with_callback<F>(
-    graph: &Vec<Vec<usize>>,
+    graph: &[Vec<usize>],
     start: usize,
-    visited: &mut Vec<bool>,
+    visited: &mut [bool],
     callback: &mut F,
 ) where
     F: FnMut(usize),
