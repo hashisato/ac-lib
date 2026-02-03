@@ -1,14 +1,15 @@
 [package]
 name = "ac-lib"
 version = "0.1.0"
-edition = "2024"
-authors = ["hashisato"]
+edition = "2021"
+authors = ["hashisato <hashisato.dev@gmail.com>"]
 description = "A rust library for competitive programming on AtCoder"
 license = "MIT"
 repository = "https://github.com/hashisato/ac-lib"
 keywords = ["atcoder", "competitive-programming", "algorithm", "data-structures"]
 categories = ["algorithms", "data-structures"]
 readme = "README.md"
+documentation = "https://docs.rs/ac-lib"
 
 [package.metadata.docs.rs]
 all-features = true
