@@ -1,4 +1,4 @@
-# ac-lib
+# [ac-lib](https://crates.io/crates/ac-lib)
 
 [![Crates.io](https://img.shields.io/crates/v/ac-lib.svg)](https://crates.io/crates/ac-lib)
 [![Documentation](https://docs.rs/ac-lib/badge.svg)](https://docs.rs/ac-lib)
