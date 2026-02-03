@@ -1,5 +1,9 @@
 # ac-lib
 
+[![Crates.io](https://img.shields.io/crates/v/ac-lib.svg)](https://crates.io/crates/ac-lib)
+[![Documentation](https://docs.rs/ac-lib/badge.svg)](https://docs.rs/ac-lib)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A Rust library for competitive programming on AtCoder.
 
 ## Features
