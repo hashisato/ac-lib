@@ -10,9 +10,7 @@ impl SegmentTree {
         let size = n.next_power_of_two();
         let mut tree = vec![0; size * 2];
 
-        for i in 0..n {
-            tree[size + i] = arr[i];
-        }
+        tree[size..(n + size)].copy_from_slice(&arr[..n]);
 
         for i in (1..size).rev() {
             tree[i] = tree[i * 2] + tree[i * 2 + 1];
