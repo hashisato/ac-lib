@@ -6,8 +6,12 @@ authors = ["hashisato"]
 description = "A rust library for competitive programming on AtCoder"
 license = "MIT"
 repository = "https://github.com/hashisato/ac-lib"
-keywords = ["atcoder", "competitive-programming", "algorithm"]
-categories = ["algorithms"]
+keywords = ["atcoder", "competitive-programming", "algorithm", "data-structures"]
+categories = ["algorithms", "data-structures"]
 readme = "README.md"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
